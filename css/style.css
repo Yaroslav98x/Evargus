@@ -1,3 +1,13 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
 html,
 body {
   font-family: "Roboto", sans-serif;
@@ -78,6 +88,10 @@ h6 {
 .header__inst {
   display: flex;
   align-items: center;
+}
+
+.header__telephone-text span:nth-child(1) {
+  margin-right: 1.2rem;
 }
 
 .header__inst span {
@@ -179,7 +193,7 @@ h6 {
 .about__item {
   /* width: 29%; */
   box-shadow: 0px 0px 40px rgba(184, 0, 95, 0.2);
-  border-radius: .9rem;
+  border-radius: 0.9rem;
   overflow: hidden;
 }
 
@@ -224,6 +238,65 @@ h6 {
   object-fit: cover;
 }
 
+.review {
+  margin-top: 22.5rem;
+  background: linear-gradient(94.31deg, rgba(212, 20, 90, 0.25) 0.96%, rgba(46, 49, 146, 0.25) 104.83%);
+}
+
+.review__slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 25rem;
+  padding: 6.3rem 4.5rem 5rem 4.5rem;
+  background: #ffffff;
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.25);
+  border-radius: 0.9rem;
+}
+
+.review__wrapper {
+  padding-top: 7rem;
+  padding-bottom: 5rem;
+}
+
+.review__slide-photo {
+  clip-path: polygon(50% 5%, 98% 31%, 98% 69%, 50% 96%, 1% 67%, 0% 30%);
+  width: 10.5rem;
+  height: 12.5rem;
+  background-color: #FFFFFF;
+}
+
+.review__slide-text {
+  margin-bottom: 5rem;
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 117%;
+  text-align: center;
+}
+
+.review__slide-name {
+  position: absolute;
+  top: 80%;
+  font-weight: 300;
+  font-size: 1.3rem;
+  line-height: 115%;
+}
+
+.review__slide-img {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -50%;
+  left: 50%;
+  transform: translate(-50%, 45%);
+  clip-path: polygon(50% 0, 100% 30%, 100% 70%, 50% 100%, 0 70%, 0 30%);
+  width: 11.5rem;
+  height: 13rem;
+  background: linear-gradient(95.2deg, #b90160 2.23%, #2e3192 99.51%);
+}
+
 .footer {
   position: relative;
 }
@@ -231,7 +304,7 @@ h6 {
 .footer__wrap {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: top;
   padding: 17.2rem 12rem 8.4rem 12rem;
 }
 
@@ -245,6 +318,10 @@ h6 {
   font-weight: 700;
   font-size: 1.4rem;
   line-height: 114%;
+}
+
+.footer__adress ul {
+  max-width: 22.4rem;
 }
 
 .footer__decor-small {
@@ -269,4 +346,8 @@ h6 {
   font-weight: 300;
   font-size: 1.4rem;
   line-height: 114%;
+}
+
+.footer__wrap li:nth-child(1) {
+  margin-bottom: 1rem;
 }
